@@ -21,7 +21,7 @@ export default function Footer() {
         </p>
         <div className="flex gap-4 text-sm text-slate-400">
           <Link
-            href="https://github.com/FernandoFerreira94/primeflixnext"
+            href="https://github.com/FernandoFerreira94/primeflix-frontend"
             target="_blank"
             className="transition duration-500 hover:text-slate-300 "
           >
