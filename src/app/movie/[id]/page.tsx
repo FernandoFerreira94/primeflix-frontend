@@ -7,11 +7,11 @@ import { addMovieToDB } from "@/actions/addMoviesToDB";
 import { MoviesProps, NewMoviesProps } from "@/utils/type";
 import { api } from "@/utils/apiBack/api";
 
-interface PageProps {
+export default async function MovieDetails({
+  params,
+}: {
   params: { id: string };
-}
-
-export default async function MovieDetails({ params }: PageProps) {
+}) {
   // recuperando id do filme via params
   const numId = Number(params.id);
   // recuperando os detalhes do filme
