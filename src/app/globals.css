@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+body {
+  background: #000000;
+  background: radial-gradient(
+    ellipse farthest-side at center center,
+    #170000 0%,
+    #080808 80%
+  );
+  background-repeat: no-repeat;
+
+}
+
+.login {
+  box-shadow: 0px 0px 10px 1px #f1f1f1;
+}
