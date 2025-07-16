@@ -7,13 +7,17 @@ import { addMovieToDB } from "@/actions/addMoviesToDB";
 import { MoviesProps, NewMoviesProps } from "@/utils/type";
 import { api } from "@/utils/apiBack/api";
 
+interface PageProps {
+  params: { id: string };
+}
+
 export default async function MovieDetails({
   params,
 }: {
-  params: { id: string };
+  params: Promise<{ id: string }>;
 }) {
-  // recuperando id do filme via params
-  const numId = Number(params.id);
+  const { id } = await params;
+  const numId = Number(id);
   // recuperando os detalhes do filme
   const movieId: MoviesProps = await getMovieDetails(numId);
 
@@ -31,7 +35,13 @@ export default async function MovieDetails({
     user_id = response.data.id;
   }
 
-  const { title, original_language, release_date, genres, id } = movieId;
+  const {
+    title,
+    original_language,
+    release_date,
+    genres,
+    id: filmeId,
+  } = movieId;
 
   let movieExist: NewMoviesProps | undefined = undefined;
 
