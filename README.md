@@ -4,6 +4,8 @@
 
 O projeto também possui um backend próprio com banco de dados **PostgreSQL**, onde cada usuário autenticado pode registrar-se, fazer login e salvar filmes em sua lista pessoal. As rotas são protegidas tanto no frontend quanto no backend com **JWT (JSON Web Token)**.
 
+![Screenshot do projeto](./public/og-image.png)
+
 ---
 
 ## 🚀 Tecnologias Utilizadas
